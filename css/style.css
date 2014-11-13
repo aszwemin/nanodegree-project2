@@ -1,19 +1,19 @@
+/* General page css */
 *{
     padding:0;
     margin:0;
     font-family: 'Roboto', sans-serif;
 }
 
-
-
-.education-entry, .work-entry, .project-entry {
-  padding-left: 5%;
-  padding-right: 5%;
+.center-content {
+  text-align: center;
 }
 
+body {
+    background-color: #3f3f3f;
+}
 
 h1 {
-
   font-size: 40px;
   color: #F5A623;
   line-height: 48px;
@@ -25,14 +25,17 @@ h2 {
   font-size: 24px;
   color: #999999;
   line-height: 29px;
-  padding: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 20px;
 }
 
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000000;
+  color: #999;
   line-height: 22px;
+  margin: 0;
 }
 
 h4 {
@@ -42,19 +45,21 @@ h4 {
   line-height: 17px;
 }
 
-h2, h3, h4, h5 {
-  padding:10px;
-  padding-left: 5%;
-  padding-right: 5%;
+p {
+  font-size: 14px;
+  color: #333333;
+  line-height: 21px;
 }
 
+span {
+  padding: 5px;
+}
 
 .date-text {
   font-style: italic;
   font-size: 14px;
   color: #999999;
   line-height: 16px;
-  float: left;
 }
 
 .location-text {
@@ -62,158 +67,87 @@ h2, h3, h4, h5 {
   font-size: 14px;
   color: #999999;
   line-height: 16px;
-  float: right;
-
-}
-
-p {
-  font-size: 14px;
-  color: #333333;
-  line-height: 21px;
-}
-
-a {
-  color: #1199C3;
-  text-decoration: none;
-  margin-top: 10px;
-  display: block;
-}
-
-.welcome-message {
-  font-style: italic;
-  font-size: 18px;
-  color: #F3F3F3;
-  line-height: 28px;
-}
-
-#skillsH3 {
-  color: #F5AE23;
-  display: none;
-}
-
-#skills {
-  display: none;
-}
-
-.orange {
-  background-color: #F5AE23;
 }
 
 .orange-text {
-  color: #F5AE23;
+color: #F5AE23;
 }
 
-.white-text {
-  font-weight: bold;
-  color: #FFFFFF;
-}
-
-.gray {
-  background-color: #F3F3F3;
-  padding-bottom: 10px;
-  clear:both;
-}
-
-.dark-gray {
-  background-color: #4A4A4A;
-}
-
-/* TODO: Replace with image later */
+/* Header styling */
 #header {
-  background-color: #484848;
+  width: 100%;
+  height: 150px;
+  float: right;
+  padding: 10px 0;
+  background: -webkit-linear-gradient(#2d2d2d, #3f3f3f); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#2d2d2d, #3f3f3f); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#2d2d2d, #3f3f3f); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#2d2d2d, #3f3f3f); /* Standard syntax */
+  border-bottom: 1px solid #2a2a2a;
 }
 
-.flex-box {
-  display: -webkit-flex;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 10px;
+#topContacts li {
+  display: inline;
 }
 
-.center-content {
-  padding: 5%;
+hr {
+  margin-bottom: 5px;
 }
 
-ul {
-  list-style-type: none;
+/* Menu styling */
+#navbar {
+  margin: 0;
 }
 
+/* Based on http://stackoverflow.com/questions/18777235/center-content-in-responsive-bootstrap-navbar */
+@media (min-width: 768px) {
+    .navbar .navbar-nav {
+        display: inline-block;
+        float: none;
+        vertical-align: top;
+    }
 
-.biopic {
-  float: left;
-  padding: 10px;
-  width: 200px;
-  display: none;
+    .navbar .navbar-collapse {
+        text-align: center;
+    }
 }
 
-img {
-  padding: 10px;
+/* Section styling */
+section {
+  padding: 10px 0;
 }
 
-
-/* Bar chart stuff */
-.chart div {
-  font: 10px sans-serif;
-  background-color: #4A4A4A;
-  text-align: right;
-  padding: 3px;
-  margin: 1px;
-  height: 12px;
-  color: white;
-  display: inline-block;
-}
-
-span {
-  padding: 5px;
-}
-
-#letsConnect {
-  text-align: center;
-}
-
-@media only screen and (max-width: 1024px) {
-  #letsConnect {
-    margin-top: 5%;
-  }
-}
-
-@media only screen and (max-width:900px) {
-  .biopic {
-    width: 175px;
-  }
-}
-
-@media only screen and (max-width: 750px) {
-  #letsConnect {
-    margin-top: 10%;
-  }
-  .biopic {
-    width: 150px;
-  }
-  .welcome-message {
-    display: none;
-  }
-}
-
-#map {
+section a {
+  color: #1199C3;
+  text-decoration: none;
   display: block;
-  height: 100%;
+  padding: 5px 0;
+}
+
+section a.inline {
+  display: inline;
+}
+
+section ul {
+  list-style-type: circle;
+  list-style-position: inside;
+}
+
+section p, li {
+  font-style: italic;
+  font-size: 14px;
+  color: #999999;
+  line-height: 16px;
+}
+
+section img.img-responsive {
+  padding: 0px;
+}
+
+/* Map styling */
+#mapContent {
+  display: block;
+  height: 400px;
   margin-left: 5%;
   margin-right: 5%;
-}
-
-#mapDiv {
-  height: 400px;
-  width: 100%;
-  padding-bottom: 5%;
-}
-
-@media only screen and (min-width: 750px) {
-  #skillsH3,
-  #skills,
-  .biopic {
-    display: block;
-  }
 }

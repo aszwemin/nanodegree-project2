@@ -1,0 +1,40 @@
+#diagram {
+	width: 100%;
+	text-align: center;
+}
+
+#text-chart {
+	display: none;
+}
+
+#chart {
+	display: block;
+}
+
+.get {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	.legend {
+		display: none;
+	}
+}
+
+@media (max-width: 600px) {
+	#chart {
+		display: none;
+	}
+	#text-chart {
+		display: inline;
+	}
+}
+
+#chart h1 {
+	font-family:'Cabin Sketch', arial, serif;
+	text-shadow:3px 3px 0 #ddd;
+	color:#193340;
+	font-size:40px;
+	margin-bottom:40px;
+	text-align:right;
+}
